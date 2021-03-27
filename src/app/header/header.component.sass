@@ -1,0 +1,36 @@
+@import src/styles.sass
+
+header
+    justify-content: space-between
+    display: flex
+    height: 100px
+    background: $background
+    font-family: Regular
+    color: $white
+    align-items: center
+    nav
+        ul
+            list-style-type: none
+            display: flex
+            padding: 0px 20px 0px 0px
+            li
+                font-size: 16px
+                text-transform: uppercase
+                margin: 10px 40px 0px 0px
+                text-align: center
+                padding: 10px
+                &:hover
+                    cursor: pointer
+                    background: $orange
+                    border-radius: 20px
+    #logo
+        font-family: ExtraBold
+        &:hover
+            cursor: pointer
+        p
+            font-size: 3rem
+            text-align: center
+            padding-left: 50px
+            letter-spacing: .5rem
+            span
+                color: $orange

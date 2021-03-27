@@ -1,0 +1,32 @@
+@import src/styles.sass
+
+#contact
+    padding-top: 300px
+    background: $background
+    #headline
+        text-align: center
+        width: 100%
+        word-break: break-word
+        font-family: ExtraBold
+        font-size: 9rem
+        letter-spacing: 5px
+        color: $font2
+        position: relative
+        &::after
+            content: "GET"
+            position: absolute
+            font-size: 2rem
+            font-family: Light
+            color: $white
+            left: 0px
+            right: 0px
+            top: 60px
+        &::before
+            content: "IN TOUCH"
+            position: absolute
+            font-size: 2rem
+            font-family: Light
+            color: $white
+            left: 0px
+            right: 0px
+            top: 100px

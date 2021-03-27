@@ -1,0 +1,33 @@
+@import src/styles.sass
+#land
+    background: $background
+    justify-content: flex-end
+    align-items: center
+    display: flex
+    position: relative
+    width: 100%
+    span
+        &:nth-of-type(1)
+            display: flex
+            flex-direction: column
+            position: absolute
+            left: 30%
+            p
+                &:nth-child(1)
+                    font-family: Regular
+                    text-transform: uppercase
+                    color: $white
+                &:nth-child(2)
+                    font-size: 2rem
+                    font-family: ExtraBold
+                    text-transform: uppercase
+                    color: $orange
+                &:nth-child(3)
+                    color: $white
+                    font-family: Light
+
+        &:nth-of-type(2)
+            position: absolute
+    img
+        width: 600px
+        height: 600px
