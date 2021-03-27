@@ -3,33 +3,13 @@
         PORTFOLIO
     </p>
     <div id="projects">
-        <div class="project">
-            <div class="template"> Quiz</div>
-            <img src="../assets/img/Quiz.png">
-            <div class="tec"><img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg"></div>
+        <div *ngFor="let project of portfolio;" class="project">
+            <div class="template"> {{ project.name }}</div>
+            <img src="{{ project.img }}">
+            <div class="tec"><img *ngFor="let value of project.tec" src="{{ value }}">
+            </div>
         </div>
-        <div class="project">
-            <div class="template"> Homepage</div>
-            <img src="../assets/img/homepage.png">
-            <div class="tec"><img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg"></div>
-        </div>
-        <div class="project">
-            <div class="template"> TicTacToe</div>
-            <img src="../assets/img/tictactoe.png">
-            <div class="tec"><img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg">
-                <img src="../assets/img/angular.svg"></div>
-        </div>
-       
+
     </div>
+
 </div>
