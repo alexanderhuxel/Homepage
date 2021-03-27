@@ -1,27 +1,48 @@
 <div id="contact">
     <p id="headline">CONTACT</p>
-    <div id="message">
-        <div id="myContact">
-            <span>
-                <p>EMAIL</p>
-                <p>AlexanderHuxel.de</p>
-            </span>
-            <span>
-                <p>PHONE</p>
-                <p>+49 157-8888-8888</p>
-            </span>
-            <span>
-                <p>ADDRESS</p>
-                <p>Bellheim</p>
-                <p>Germany</p>
-            </span>
+    <div id="messageBox">
+        <div id="message">
+            <div id="myContact">
+                <div id="innerBox">
+                    <span>
+                        <p>EMAIL</p>
+                        <p>AlexanderHuxel.de</p>
+                    </span>
+                    <span>
+                        <p>PHONE</p>
+                        <p>+49 157-8888-8888</p>
+                    </span>
+                    <span>
+                        <p>ADDRESS</p>
+                        <p>Bellheim</p>
+                        <p>Germany</p>
+                    </span>
+                </div>
+            </div>
+            <div id="contactform">
+                <form class="example-form">
+                    <mat-form-field class="half-width">
+                        <mat-label>NAME</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field class="half-width">
+                        <mat-label>EMAIL</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field class="halfplus-width">
+                        <mat-label>PHONE NUMBER</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width">
+                        <mat-label>Message</mat-label>
+                        <textarea matInput></textarea>
+                    </mat-form-field>
+                </form>
+
+                <p>SEND</p>
+            </div>
         </div>
-    <div id="contactform">
-        <input  type="text">
-        <input type="number">
-        <input type="text">
-        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        <button>SEND</button>
-    </div>
+
     </div>
 </div>

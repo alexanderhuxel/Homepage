@@ -1,8 +1,27 @@
 @import src/styles.sass
 
+.half-width
+    width: 50%!important
+    height: 100px
+.halfplus-width
+    width: 51%!important
+    height: 100px
+.full-width
+    margin-bottom: 100px
+    width: 100%!important
+.customizer
+    color: $white!important
+    label
+        color: red!important
+
 #contact
+    padding-bottom: 200px
     padding-top: 300px
     background: $background
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     #headline
         text-align: center
         width: 100%
@@ -30,3 +49,36 @@
             left: 0px
             right: 0px
             top: 100px
+
+#messageBox
+    display: flex
+    border: solid 1px white
+    width: 80%
+    #message
+        width: 100%
+        display: flex
+        justify-content: center
+        align-content: center
+        #myContact
+            width: 300px
+            color: $font3
+            background: $footer
+            #innerBox
+                padding: 50px
+                p
+                    &:nth-of-type(1),&:nth-of-type(3),&:nth-of-type(5)
+                        font-family: Regular
+                        font-size: 1.5rem
+                    &:nth-of-type(2),&:nth-of-type(4),&:nth-of-type(6),&:nth-of-type(7)
+                        font-family: Light
+
+    #contactform
+        margin: 0% 5% 0% 10%
+        p
+            background: $orange
+            border-radius: 20px
+            width: 100px
+            text-align: center
+            padding: 10px
+            color: $white
+            font-size: 1rem
