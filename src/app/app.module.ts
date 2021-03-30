@@ -13,6 +13,10 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { PreloaderComponent } from './preloader/preloader.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import { RouterModule } from '@angular/router';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { LaunchComponent } from './launch/launch.component';
+
 
 @NgModule({
   declarations: [
@@ -25,12 +29,15 @@ import { ImprintComponent } from './imprint/imprint.component';
     AboutMeComponent,
     PreloaderComponent,
     DataProtectionComponent,
-    ImprintComponent
+    ImprintComponent,
+    LaunchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule,
+    MatFormFieldModule,
     MatInputModule,
+    AppRoutingModule,
     BrowserAnimationsModule
   ],
   providers: [],
