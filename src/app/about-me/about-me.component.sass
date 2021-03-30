@@ -6,23 +6,15 @@
     justify-content: center
     align-items: center
     flex-direction: row
-    #border
+    #imgbox
         width: 400px
-        height: 600px
-        position: relative
-        &::after
-            position: absolute
-            content: ""
-            width: 410px
-            height: 610px
-            background: $orange
-            bottom: 0
-            left: 0
-            z-index: 20
-
+        height: 300px
         img
             width: 100%
+            border-top-right-radius: 20px
             height: 100%
+            border-right: $orange solid 10px
+            border-top: $orange solid 10px
             z-index: 21
             position: relative
 
@@ -57,11 +49,31 @@
 
             &:nth-of-type(3)
                 margin-top: 30px!important
-                width: 30%
+                width: 200px
                 padding: 10px
                 border-radius: 20px
-                margin: 0% 35% 0% 35%
+                margin-left: auto
+                margin-right: auto
                 background: $orange
+                font-family: Bold
                 &:hover
                     cursor: pointer
                     opacity: .9
+@media screen and ( max-width: 800px )
+    #about
+        #imgbox
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                width: 80%
+        #text
+            margin-left: 0px
+            padding: 20px
+            p
+                font-size: 2rem
+                &:nth-of-type(1)
+                    font-size: 4rem
+                    &::after
+                        top: 35px
+                        font-size: 1rem

@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { PreloaderComponent } from './preloader/preloader.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PreloaderComponent } from './preloader/preloader.component';
     FooterComponent,
     PortfolioComponent,
     AboutMeComponent,
-    PreloaderComponent
+    PreloaderComponent,
+    DataProtectionComponent,
+    ImprintComponent
   ],
   imports: [
     BrowserModule,

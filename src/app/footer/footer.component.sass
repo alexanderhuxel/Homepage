@@ -7,16 +7,15 @@ footer
     flex-direction: column
     justify-content: center
     align-items: center
-    #footer-bar
-        width: 100%
-        display: flex
-        flex-direction: row
-        justify-content: space-around
-        align-items: center
-        #logo
-            font-family: ExtraBold
-            &:hover
-                cursor: pointer
+    a
+        text-decoration: none
+        color: $font3
+        font-family: Bold
+    h3
+        color: $white
+        font-family: Regular
+    #logo
+        font-family: ExtraBold
         a
             text-decoration: none
         p
@@ -27,34 +26,46 @@ footer
             letter-spacing: .5rem
             span
                 color: $orange
-        ul
-            h3
-                margin: 0px 0px 10px 0px!important
-                padding-left: -10px
-                color: $white
-                font-family: serif
-            li
-                list-style-type: none
-                font-family: Light
-                a
-                    text-decoration: none
-                    color: $font3
-                    &:hover
-                        cursor: pointer
-                        color: $orange
-        #Social
-            ul
+
+    #footer-bar
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        #links
+            display: flex
+            justify-content: space-around
+            width: 80%
+            #QLinks
                 display: flex
-            h3
-                color: $white
-                margin-left: 30px
-            i
-                font-size: 1.5rem
-                margin: 0px 5px 0px 5px
-                &:hover
-                    cursor: pointer
-                    color: $orange
+                flex-direction: column
+            #ELinks
+                display: flex
+                flex-direction: column
+            #Social
+                display: flex
+                flex-direction: column
+                span
+                    a
+                        text-decoration: none
+                        color: $font3
+                        font-size: 1.5rem
+                        margin: 0px 5px 0px 5px
+                        &:hover
+                            color: $orange
     #copyright
         text-align: center
         color: $white
         margin-top: 50px
+@media ( max-width: 1000px )
+    footer
+        height: auto
+        #logo
+            display: none
+        #footer-bar
+            #links
+                text-align: center
+                width: 100%
+                justify-content: center
+                align-items: center
+                flex-direction: column

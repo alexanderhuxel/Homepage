@@ -7,13 +7,26 @@
     position: relative
     width: 100%
     overflow: hidden
+    padding-bottom: 200px
+    .fa-arrow-down
+        color: $font3
+        position: absolute
+        bottom: 20px
+        left: 50vw
+        font-size: 3rem
+        animation: fadedown ease-in-out infinite alternate 1.5s
+        z-index: 1000
+
     span
         &:nth-of-type(1)
+            width: 100%
             display: flex
             flex-direction: column
+            left: 35%
             position: absolute
-            left: 25%
+            bottom: 450px
             z-index: 10
+
             p
                 margin: 0
                 &:nth-child(1)
@@ -42,5 +55,64 @@
             opacity: .01
     img
         opacity: .8
-        width: 1000px
-        height: 600px
+        width: 800px
+        @media screen and ( max-width: 600px )
+            width: 100%
+
+@keyframes fadedown
+    0%
+        opacity: 1
+        transform: translateY(0px)
+    100%
+        opacity: .5
+        transform: translateY(20px)
+@media screen and ( max-width: 800px )
+    #land
+        display: flex!important
+        flex-direction: column-reverse
+        img
+            border-radius: 20px
+            margin-top: 20px
+            width: 80%
+        span
+            margin-left: 10px!important
+            position: static!important
+            height: 20px
+            zoom: .8!important
+
+@media screen and ( max-width: 1000px )
+    #land
+        span
+            &:nth-of-type(1)
+                zoom: .9
+                left: 50px!important
+                bottom: 350px
+
+@media screen and ( max-width: 1200px )
+    #land
+        span
+            &:nth-of-type(1)
+                zoom: .9
+                left: 50px!important
+                bottom: 350px
+
+@media screen and ( max-width: 1400px )
+    #land
+        span
+            &:nth-of-type(1)
+                left: 50px!important
+                bottom: 350px
+
+@media screen and ( max-width: 1600px )
+    #land
+        span
+            &:nth-of-type(1)
+                left: 150px!important
+                bottom: 350px
+
+@media screen and ( max-width: 1800px )
+    #land
+        span
+            &:nth-of-type(1)
+                left: 450px!important
+                bottom: 250px

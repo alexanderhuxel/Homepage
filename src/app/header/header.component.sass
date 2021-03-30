@@ -8,6 +8,9 @@ header
     font-family: Regular
     color: $white
     align-items: center
+    @media ( max-width: 1000px  )
+        nav
+            display: none!important
     nav
         ul
             list-style-type: none
@@ -42,3 +45,9 @@ header
 
             span
                 color: $orange
+@media  ( max-width: 1000px )
+    header
+        #logo
+            p
+                padding-left: 15px
+                font-size: 2.5rem
