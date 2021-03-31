@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -8,17 +9,22 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  emailRegx = /^(([^<>+()\[\]\\.,;:\s@"-#$%&=]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,3}))$/;
+
   @Input() name: string = "";
   @Input() email: string = "";
   @Input() phone: string = "";
   @Input() message: string = "";
-  constructor() { }
+
 
 
 
 
   ngOnInit(): void {
+
   }
+
+
 
   async sendMail() {
     try {
@@ -44,6 +50,4 @@ export class ContactComponent implements OnInit {
       console.log("unsuccess")
     }
   }
-
-
 }
