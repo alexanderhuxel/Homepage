@@ -13,20 +13,19 @@ import { PreloaderComponent } from './preloader/preloader.component';
 
 const routes: Routes = [
   { path: '', component: LaunchComponent },
-  { path: '', component: PreloaderComponent },
-  { path: 'about-me', component: AboutMeComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'x', component: HeaderComponent },
-  { path: 'x', component: FooterComponent },
-  { path: 'land', component: LandComponent },
+  // { path: '', component: PreloaderComponent },
+  // { path: 'about-me', component: AboutMeComponent },
+  // { path: 'contact', component: ContactComponent },
+  // { path: 'x', component: HeaderComponent },
+  // { path: 'x', component: FooterComponent },
+  // { path: 'land', component: LandComponent },
   { path: 'dataprotection', component: DataProtectionComponent },
   { path: 'imprint', component: ImprintComponent },
-  { path: 'portfolio', component: PortfolioComponent }
-
+  // { path: 'portfolio', component: PortfolioComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

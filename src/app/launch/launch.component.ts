@@ -10,6 +10,7 @@ export class LaunchComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

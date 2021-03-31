@@ -1,4 +1,5 @@
 @import src/styles.sass
+
 #about
     background: $background
     padding-top: 300px
@@ -60,6 +61,11 @@
                 &:hover
                     cursor: pointer
                     opacity: .9
+                a
+                    text-decoration: none
+                    font-family: Bold
+                    color: $white
+
 @media screen and ( max-width: 800px )
     #about
         #imgbox
@@ -67,6 +73,7 @@
             justify-content: center
             align-items: center
             img
+                height: 70%
                 width: 80%
         #text
             margin-left: 0px

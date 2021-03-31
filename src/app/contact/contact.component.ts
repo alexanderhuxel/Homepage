@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  @Input() name: string = "";
+  @Input() email: string = "";
+  @Input() phone: string = "";
+  @Input() message: string = "";
   constructor() { }
 
 
@@ -17,12 +22,11 @@ export class ContactComponent implements OnInit {
 
   async sendMail() {
     try {
-      console.log("triggerd")
       const formData = new FormData();
-      formData.append('name', 'Junus');
-      formData.append('email', 'Hallo');
-      formData.append('phone', '^123');
-      formData.append('message', '345');
+      formData.append('name', this.name);
+      formData.append('email', this.email);
+      formData.append('phone', this.phone);
+      formData.append('message', this.message);
       let url = 'https://alexhuxel.de/send_mail.php';
       let response = await fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -34,8 +38,12 @@ export class ContactComponent implements OnInit {
         body: formData // body data type must match "Content-Type" header
       });
       // Success dialog
+      console.log("success")
     } catch (e) {
       // Error dialog
+      console.log("unsuccess")
     }
   }
+
+
 }

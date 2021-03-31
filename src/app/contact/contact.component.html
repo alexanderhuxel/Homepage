@@ -6,7 +6,7 @@
                 <div id="innerBox">
                     <span>
                         <p>EMAIL</p>
-                        <p>AlexanderHuxel.de</p>
+                        <p>Admin@alexhuxel.de</p>
                     </span>
                     <span>
                         <p>PHONE</p>
@@ -23,20 +23,21 @@
                 <form class="example-form">
                     <mat-form-field class="half-width">
                         <mat-label>NAME</mat-label>
-                        <input matInput>
+                        <input id="name" required [(ngModel)]="name" [ngModelOptions]="{standalone: true}" matInput>
                     </mat-form-field>
                     <mat-form-field class="half-width margin-left">
                         <mat-label>EMAIL</mat-label>
-                        <input matInput>
+                        <input id="email" [ngModelOptions]="{standalone: true}" required [(ngModel)]="email" matInput>
                     </mat-form-field>
                     <mat-form-field class="halfplus-width">
                         <mat-label>PHONE NUMBER</mat-label>
-                        <input matInput>
+                        <input id="phone" [ngModelOptions]="{standalone: true}" required [(ngModel)]="phone" matInput>
                     </mat-form-field>
 
                     <mat-form-field class="full-width">
                         <mat-label>Message</mat-label>
-                        <textarea matInput></textarea>
+                        <textarea id="message" [ngModelOptions]="{standalone: true}" [(ngModel)]="message" required
+                            matInput></textarea>
                     </mat-form-field>
                 </form>
 

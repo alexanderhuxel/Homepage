@@ -32,9 +32,44 @@
         justify-content: center
         align-items: center
         .project
+            position: relative
             width: 300px
             height: 300px
             margin: 2rem
+            overflow: hidden
+            .box
+                top: 15%
+                position: absolute
+                display: flex
+                width: 100%
+                height: 100%
+                z-index: 100
+                font-family: Bold
+                font-size: 1.5rem
+                a
+                    text-decoration: none
+                    color: $font2
+                    &:hover
+                        color: $orange
+
+                #left
+                    transform: translateX(-150px)
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 50%
+                    transition: ease-in-out 225ms
+                    height: 70%
+                    background: rgba(255,255,255, .8)
+                #right
+                    background: rgba(255,255,255, .8)
+                    display: flex
+                    transform: translateX(150px)
+                    justify-content: center
+                    align-items: center
+                    transition: ease-in-out 225ms
+                    width: 50%
+                    height: 70%
             &:hover
                 cursor: pointer
             .template
@@ -55,6 +90,11 @@
                     margin: 0px 10px 10px 0px
                     width: 30px
                     height: 30px
+.active
+    #left
+        transform: translateX(0px)!important
+    #right
+        transform: translateX(0px)!important
 @media screen and ( max-width: 880px )
     #portfolio
         p

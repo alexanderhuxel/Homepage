@@ -4,6 +4,7 @@ footer
     width: 100%
     height: 300px
     display: flex
+    position: relative
     flex-direction: column
     justify-content: center
     align-items: center
@@ -53,10 +54,17 @@ footer
                         margin: 0px 5px 0px 5px
                         &:hover
                             color: $orange
+    #border
+        background: $font3
+        height: 3px
+        border-radius: 5px
+        width: 120px
+        margin-top: 40px
     #copyright
         text-align: center
         color: $white
-        margin-top: 50px
+        margin-top: 10px
+        font-family: Regular
 @media ( max-width: 1000px )
     footer
         height: auto

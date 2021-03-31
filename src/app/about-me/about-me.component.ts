@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
@@ -10,10 +11,20 @@ export class AboutMeComponent implements OnInit {
   constructor() { }
 
 
-
   ngOnInit(): void {
 
-
-
   }
+
+
+  createNewTicket() {
+    return {
+      title: "title",
+      cat: "cat",
+      descr: "descr",
+      duedate: "duedate",
+      urgency: "urgency"
+
+    }
+  }
+
 }

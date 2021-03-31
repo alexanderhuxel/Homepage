@@ -3,7 +3,16 @@
         PORTFOLIO
     </p>
     <div id="projects">
-        <div *ngFor="let project of portfolio;" class="project">
+        <div *ngFor="let project of portfolio; index as i;" class="project">
+            <div (mouseenter)="fadeInProject(i)" (mouseleave)="fadeInProject(i)" class="box" id="{{ i }}">
+                <div id="left">
+                    <span><a href="#">Doc</a></span>
+                </div>
+                <div id="right"><span>
+                        <a href="#">Project</a>
+                    </span></div>
+            </div>
+
             <div class="template"> {{ project.name }}</div>
             <img src="{{ project.img }}">
             <div class="tec"><img *ngFor="let value of project.tec" src="{{ value }}">
@@ -11,5 +20,3 @@
         </div>
 
     </div>
-
-</div>
