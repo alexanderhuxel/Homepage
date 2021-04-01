@@ -16,7 +16,7 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { RouterModule } from '@angular/router';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { LaunchComponent } from './launch/launch.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -37,6 +37,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     AppRoutingModule,

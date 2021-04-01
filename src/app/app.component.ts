@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   title = 'Homepage';
   constructor(public router: Router, @Inject(DOCUMENT) private document: Document) { }
 
+
   ngOnInit() {
 
     this.router.events.subscribe((evt) => {

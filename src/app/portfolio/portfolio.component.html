@@ -4,7 +4,8 @@
     </p>
     <div id="projects">
         <div *ngFor="let project of portfolio; index as i;" class="project">
-            <div (mouseenter)="fadeInProject(i)" (mouseleave)="fadeInProject(i)" class="box" id="{{ i }}">
+            <div (mouseenter)="fadeInProject(i)" (mouseleave)="fadeInProject(i)" (touchstart)="fadeInProject(i)"
+                class="box" id="{{ i }}">
                 <div id="left">
                     <span><a href="#">Doc</a></span>
                 </div>
