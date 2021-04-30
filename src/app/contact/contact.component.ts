@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { ErrorComponent } from '../error/error.component';
+import { SendComponent } from '../send/send.component';
+import { ValidDataComponent } from '../valid-data/valid-data.component';
 
 
 
@@ -8,6 +11,7 @@ import { FormControl, Validators } from '@angular/forms';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.sass']
 })
+
 export class ContactComponent implements OnInit {
 
   emailRegx = /^(([^<>+()\[\]\\.,;:\s@"-#$%&=]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,3}))$/;
@@ -17,9 +21,25 @@ export class ContactComponent implements OnInit {
   @Input() phone: string = "";
   @Input() message: string = "";
 
+  constructor(public dialog: MatDialog) { }
 
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open(SendComponent);
 
+    // dialogRef.afterClosed().subscribe(name => {
+    //   if (name && name.length > 0) {
+    //     this.game.players.push(name);
+    //     this.saveGame();
+    //   }
+    // });
+  }
+  openError(): void {
+    const errorRef = this.dialog.open(ErrorComponent);
+  }
+  openValidData(): void {
+    const errorRef = this.dialog.open(ValidDataComponent);
+  }
 
   ngOnInit(): void {
 
@@ -28,8 +48,8 @@ export class ContactComponent implements OnInit {
 
 
   async sendMail() {
-    if (this.name == "" && this.phone == "" && this.email == "" && this.message == "") {
-      this.error = true;
+    if (this.name == "", this.phone == "", this.email == "", this.message == "") {
+      this.openValidData();
     } else {
       try {
         const formData = new FormData();
@@ -47,28 +67,14 @@ export class ContactComponent implements OnInit {
           referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
           body: formData // body data type must match "Content-Type" header
         });
-        // Success dialog
-        console.log("success")
+        this.openDialog();
         this.name = "";
         this.phone = "";
         this.email = "";
         this.message = "";
       } catch (e) {
-        // Error dialog
-        console.log("unsuccess")
+        this.openError();
       }
     }
-  }
-}
-
-export class FormFieldErrorExample {
-  email = new FormControl('', [Validators.required, Validators.email]);
-
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 }

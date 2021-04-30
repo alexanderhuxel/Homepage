@@ -19,12 +19,12 @@
                     </span>
                 </div>
             </div>
+
             <div id="contactform">
                 <form class="example-form">
-                    <!-- <mat-form-field class="half-width">
+                    <mat-form-field class="half-width">
                         <mat-label>NAME</mat-label>
-                        <input id="name" required [formControl]="email" [(ngModel)]="name" matInput>
-                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                        <input id="name" [ngModelOptions]="{standalone: true}" [(ngModel)]="name" matInput>
                     </mat-form-field>
                     <mat-form-field class="half-width margin-left">
                         <mat-label>E-MAIL</mat-label>
@@ -39,12 +39,8 @@
                         <mat-label>Message</mat-label>
                         <textarea id="message" [ngModelOptions]="{standalone: true}" [(ngModel)]="message"
                             matInput></textarea>
-                    </mat-form-field> -->
-                    <mat-form-field appearance="fill">
-                        <mat-label>Enter your email</mat-label>
-                        <input matInput placeholder="pat@example.com" [formControl]="email" required>
-                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                     </mat-form-field>
+
 
                 </form>
 

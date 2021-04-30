@@ -17,6 +17,10 @@ import { RouterModule } from '@angular/router';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { LaunchComponent } from './launch/launch.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SendComponent } from './send/send.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ErrorComponent } from './error/error.component';
+import { ValidDataComponent } from './valid-data/valid-data.component';
 
 
 @NgModule({
@@ -31,12 +35,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PreloaderComponent,
     DataProtectionComponent,
     ImprintComponent,
-    LaunchComponent
+    LaunchComponent,
+    SendComponent,
+    ErrorComponent,
+    ValidDataComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     FormsModule,
+    MatDialogModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
