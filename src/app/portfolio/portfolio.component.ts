@@ -8,20 +8,29 @@ import { Component, OnInit } from '@angular/core';
 export class PortfolioComponent implements OnInit {
   portfolio = [{
     name: "Quiz",
-    img: "assets/img/quiz.jpg",
-    tec: ["assets/img/css.svg", "assets/img/html.svg", "assets/img/javascript.svg"]
+    img: "assets/newimg/quiz.png",
+    tec: ["assets/img/sass.svg", "assets/img/html.svg", "assets/img/javascript.svg"],
+    JsDoc: "https://alexhuxel.de/quiz/out/",
+    link: "https://alexhuxel.de/quiz/"
   }, {
-    name: "Tic Tac Toe",
-    img: "assets/img/tictactoe.jpg",
-    tec: ["assets/img/css.svg", "assets/img/html.svg", "assets/img/javascript.svg"]
+    name: "Join",
+    img: "assets/newimg/join.png",
+    tec: ["assets/img/sass.svg", "assets/img/html.svg", "assets/img/javascript.svg"],
+    JsDoc: "https://alexhuxel.de/join/out/",
+    link: "https://alexhuxel.de/join"
+
   }, {
     name: "Homepage",
-    img: "assets/img/homepage.jpg",
-    tec: ["assets/img/angular.svg", "assets/img/sass.svg", "assets/img/html.svg", "assets/img/typescript.svg", "assets/img/javascript.svg"]
+    img: "assets/newimg/homepage.png",
+    tec: ["assets/img/angular.svg", "assets/img/sass.svg", "assets/img/html.svg", "assets/img/typescript.svg", "assets/img/javascript.svg"],
+    JsDoc: "",
+    link: "https://alexhuxel.de"
   }, {
     name: "Ring Of Fire",
-    img: "assets/img/ringoffire.webp",
-    tec: ["assets/img/angular.svg", "assets/img/sass.svg", "assets/img/html.svg", "assets/img/typescript.svg", "assets/img/javascript.svg"]
+    img: "assets/newimg/ringoffire.png",
+    tec: ["assets/img/angular.svg", "assets/img/sass.svg", "assets/img/html.svg", "assets/img/typescript.svg", "assets/img/javascript.svg"],
+    JsDoc: "https://ring-of-fire-70a6a.web.app/documentation/index.html",
+    link: "https://ring-of-fire-70a6a.web.app/"
   }]
   constructor() { }
 

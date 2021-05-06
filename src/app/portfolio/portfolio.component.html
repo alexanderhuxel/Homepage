@@ -7,10 +7,12 @@
             <div (mouseenter)="fadeInProject(i)" (mouseleave)="fadeInProject(i)" (touchstart)="fadeInProject(i)"
                 class="box" id="{{ i }}">
                 <div id="left">
-                    <span><a href="#">Doc</a></span>
+                    <span>
+                        <a href="{{ project.JsDoc }}">JsDoc</a>
+                    </span>
                 </div>
                 <div id="right"><span>
-                        <a href="#">Project</a>
+                        <a href="{{ project.link }}">Project</a>
                     </span></div>
             </div>
 

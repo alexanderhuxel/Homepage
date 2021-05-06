@@ -10,7 +10,7 @@
                     </span>
                     <span>
                         <p>PHONE</p>
-                        <p>+49 157-8888-8888</p>
+                        <p>+49 157-8680-1970</p>
                     </span>
                     <span>
                         <p>ADDRESS</p>
@@ -21,30 +21,42 @@
             </div>
 
             <div id="contactform">
-                <form class="example-form">
+                <form (ngSubmit)="sendMail();" [formGroup]="mailForm" class="example-form">
                     <mat-form-field class="half-width">
                         <mat-label>NAME</mat-label>
-                        <input id="name" [ngModelOptions]="{standalone: true}" [(ngModel)]="name" matInput>
+                        <input required type="text" id="name" formControlName="name" [(ngModel)]="name" matInput>
+                        <mat-error *ngIf="mailForm.controls['name'].hasError('required') && !send">name is
+                            <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
                     <mat-form-field class="half-width margin-left">
                         <mat-label>E-MAIL</mat-label>
-                        <input id="email" [ngModelOptions]="{standalone: true}" [(ngModel)]="email" matInput>
+                        <input required type="email" id="email" formControlName="email" [(ngModel)]="email" matInput>
+                        <mat-error *ngIf="mailForm.controls['email'].hasError('required') && !send"> email is
+                            <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
                     <mat-form-field class="halfplus-width">
                         <mat-label>PHONE NUMBER</mat-label>
-                        <input id="phone" [ngModelOptions]="{standalone: true}" [(ngModel)]="phone" matInput>
+                        <input type="phone" required id="phone" formControlName="phone" [(ngModel)]="phone" matInput>
+                        <mat-error *ngIf="mailForm.controls['phone'].hasError('required') && !send">
+                            phonenumber is
+                            <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
 
                     <mat-form-field class="full-width">
                         <mat-label>Message</mat-label>
-                        <textarea id="message" [ngModelOptions]="{standalone: true}" [(ngModel)]="message"
+                        <textarea required id="message" formControlName="message" [(ngModel)]="message"
                             matInput></textarea>
+                        <mat-error *ngIf="mailForm.controls['message'].hasError('required') && !send">message is
+                            <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
-
-
+                    <button type="submit" [disabled]="!mailForm.valid"> Send</button>
                 </form>
 
-                <p (click)="sendMail()">SEND</p>
+
             </div>
 
 

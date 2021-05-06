@@ -4,36 +4,53 @@ mark
     position: absolute
     top: 10px
     left: 30%
+.open
+    height: auto!important
+.d-none
+    display: none!important
+.active
+    span
+        width: 25px!important
+        &::after
+            width: 32px!important
+            background: $white
+        &::before
+            width: 35px!important
 header
     justify-content: space-between
+    padding-right: 50px
     display: flex
     height: 100px
     background: $background
     font-family: Regular
     color: $white
     align-items: center
-    @media ( max-width: 1000px  )
-        nav
-            display: none!important
-    nav
-        ul
-            list-style-type: none
+    #menuicon
+        display: none
+    #menu
+        display: flex
+        #mobilemenu
+            display: none
+        #desktopmenu
             display: flex
-            padding: 0px 20px 0px 0px
-            li
-                margin: 10px 40px 0px 0px
-                a
-                    font-size: 16px
-                    text-transform: uppercase
-                    text-align: center
-                    padding: 10px
-                    text-decoration: none
-                    color: $white
-
-                    &:hover
-                        cursor: pointer
-                        background: $orange
-                        border-radius: 20px
+            font-family: Regular
+            list-style: none
+            margin-top: 20px
+            width: 100%
+            a
+                transition: ease-in-out 225ms
+                margin: 0px 20px 0px 20px
+                text-transform: uppercase
+                font-size: 16px
+                font-family: Regular
+                border-radius: 50px
+                padding: 7px
+                background: transparent
+                &:hover
+                    border-radius: 50px
+                    padding: 7px
+                    cursor: pointer
+                    background: $orange
     #logo
         font-family: ExtraBold
         &:hover
@@ -49,8 +66,82 @@ header
 
             span
                 color: $orange
-@media  ( max-width: 1000px )
+    button
+        all: unset
+        position: absolute!important
+        right: 15px
+        top: 35px
+        width: 40px
+        height: 35px
+        cursor: pointer
+        z-index: 99
+        transform: rotate(180deg)
+
+        span
+            transition: ease-in-out 225ms
+            position: absolute
+            background: $orange
+            border-radius: 5px
+            top: 12px
+            width: 40px
+            height: 10px
+
+            &::before
+                transition: ease-in-out 225ms
+                content: ""
+                border-radius: 5px
+                background: $orange
+                position: absolute
+                top: -13px
+                width: 40px
+                height: 10px
+            &::after
+                transition: ease-in-out 225ms
+                content: ""
+                border-radius: 5px
+                background: $orange
+                position: absolute
+
+                top: 13px
+                width: 40px
+                height: 10px
+
+@media screen and  ( max-width: 1000px )
     header
+        min-height: 100px
+        max-height: 400px
+        #menuicon
+            display: initial!important
+        #desktopmenu
+            display: none!important
+        #menu
+            margin-top: 0px
+            top: -15px
+            z-index: 99
+            height: 300px!important
+            width: 100%
+            position: absolute
+            right: 0px
+            #mobilemenu
+                background: $font2
+                border-bottom-left-radius: 20px
+                border-bottom-right-radius: 20px
+                height: 0px
+                list-style: none
+                display: flex
+                width: 100%
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                a
+                    font-size: 2rem
+                    font-family: ExtraBold
+                    text-transform: uppercase
+                    letter-spacing: .3rem
+                    color: $orange
+                    &:hover
+                        cursor: pointer
+                        color: $white
         #logo
             p
                 padding-left: 15px
