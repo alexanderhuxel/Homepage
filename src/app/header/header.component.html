@@ -1,31 +1,40 @@
 <header>
-    <div id="logo">
-        <a href="#logo">
-            <p>ALE<span>X</span></p>
-        </a>
-    </div>
+        <div id="logo">
+                <a (click)="scrollService.scrollInto('logo')" (touch)="scrollService.scrollInto('logo')">
+                        <p>ALE<span>X</span></p>
+                </a>
+        </div>
 
-    <nav id="menu">
-        <ul id="desktopmenu">
-            <li><a (click)="scrollInto('about')" (touch)="scrollInto('about')">About Me</a></li>
-            <li><a (click)="scrollInto('portfolio')" (touch)="scrollInto('portfolio')">Portfolio</a></li>
-            <li><a (click)="scrollInto('contact')" (touch)="scrollInto('contact')">Contact</a></li>
-            <li><a (click)="scrollInto('contact')" (touch)="scrollInto('contact')">Hire Me</a></li>
+        <nav id="menu">
+                <ul id="desktopmenu">
+                        <li><a (click)="scrollService.scrollInto('about')"
+                                        (touch)="scrollService.scrollInto('about')">About Me</a>
+                        </li>
+                        <li><a (click)="scrollService.scrollInto('portfolio')"
+                                        (touch)="scrollService.scrollInto('portfolio')">Portfolio</a></li>
+                        <li><a (click)="scrollService.scrollInto('contact')"
+                                        (touch)="scrollService.scrollInto('contact')">Contact</a></li>
+                        <li><a (click)="scrollService.scrollInto('contact')"
+                                        (touch)="scrollService.scrollInto('contact')">Hire
+                                        Me</a></li>
 
-        </ul>
-        <ul id="mobilemenu" class="d-none">
-            <li><a (click)="scrollInto('about'); openMenu()" (touch)="scrollInto('about'); openMenu()">About Me</a></li>
-            <li><a (click)="scrollInto('portfolio'); openMenu()"
-                    (touch)="scrollInto('portfolio'); openMenu()">Portfolio</a></li>
-            <li><a (click)="scrollInto('contact'); openMenu() " (touch)="scrollInto('contact'); openMenu()">Contact</a>
-            </li>
-            <li><a (click)="scrollInto('contact'); openMenu()" (touch)="scrollInto('contact'); openMenu()">Hire Me</a>
-            </li>
+                </ul>
+                <ul id="mobilemenu" class="d-none">
+                        <li><a (click)="scrollService.scrollInto('about'); openMenu()"
+                                        (touch)="scrollService.scrollInto('about'); openMenu()">About Me</a></li>
+                        <li><a (click)="scrollService.scrollInto('portfolio'); openMenu()"
+                                        (touch)="scrollService.scrollInto('portfolio'); openMenu()">Portfolio</a></li>
+                        <li><a (click)="scrollService.scrollInto('contact'); openMenu() "
+                                        (touch)="scrollService.scrollInto('contact'); openMenu()">Contact</a>
+                        </li>
+                        <li><a (click)="scrollService.scrollInto('contact'); openMenu()"
+                                        (touch)="scrollService.scrollInto('contact'); openMenu()">Hire Me</a>
+                        </li>
 
-        </ul>
+                </ul>
 
 
 
-    </nav>
-    <button (click)="openMenu()" id="menuicon"><span></span></button>
+        </nav>
+        <button (click)="openMenu()" id="menuicon"><span></span></button>
 </header>

@@ -10,7 +10,6 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { PreloaderComponent } from './preloader/preloader.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { RouterModule } from '@angular/router';
@@ -20,7 +19,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SendComponent } from './send/send.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ErrorComponent } from './error/error.component';
-import { ValidDataComponent } from './valid-data/valid-data.component';
 
 
 @NgModule({
@@ -32,13 +30,11 @@ import { ValidDataComponent } from './valid-data/valid-data.component';
     FooterComponent,
     PortfolioComponent,
     AboutMeComponent,
-    PreloaderComponent,
     DataProtectionComponent,
     ImprintComponent,
     LaunchComponent,
     SendComponent,
     ErrorComponent,
-    ValidDataComponent
   ],
   imports: [
     BrowserModule,

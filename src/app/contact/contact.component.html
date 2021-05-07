@@ -21,39 +21,25 @@
             </div>
 
             <div id="contactform">
-                <form (ngSubmit)="sendMail();" [formGroup]="mailForm" class="example-form">
-                    <mat-form-field class="half-width">
+                <form #f="ngForm" (ngSubmit)="sendMail(f);" class="example-form">
+                    <mat-form-field class="half-width target">
                         <mat-label>NAME</mat-label>
-                        <input required type="text" id="name" formControlName="name" [(ngModel)]="name" matInput>
-                        <mat-error *ngIf="mailForm.controls['name'].hasError('required') && !send">name is
-                            <strong>required</strong>
-                        </mat-error>
+                        <input required type="text" name="name" id="name" [(ngModel)]="name" matInput>
                     </mat-form-field>
-                    <mat-form-field class="half-width margin-left">
+                    <mat-form-field class=" half-width margin-left traget">
                         <mat-label>E-MAIL</mat-label>
-                        <input required type="email" id="email" formControlName="email" [(ngModel)]="email" matInput>
-                        <mat-error *ngIf="mailForm.controls['email'].hasError('required') && !send"> email is
-                            <strong>required</strong>
-                        </mat-error>
+                        <input required type="email" name="email" id="email" [(ngModel)]="email" matInput>
                     </mat-form-field>
-                    <mat-form-field class="halfplus-width">
+                    <mat-form-field class="halfplus-width target">
                         <mat-label>PHONE NUMBER</mat-label>
-                        <input type="phone" required id="phone" formControlName="phone" [(ngModel)]="phone" matInput>
-                        <mat-error *ngIf="mailForm.controls['phone'].hasError('required') && !send">
-                            phonenumber is
-                            <strong>required</strong>
-                        </mat-error>
+                        <input type="phone" required name="phone" id="phone" [(ngModel)]="phone" matInput>
                     </mat-form-field>
 
-                    <mat-form-field class="full-width">
+                    <mat-form-field class="full-width target">
                         <mat-label>Message</mat-label>
-                        <textarea required id="message" formControlName="message" [(ngModel)]="message"
-                            matInput></textarea>
-                        <mat-error *ngIf="mailForm.controls['message'].hasError('required') && !send">message is
-                            <strong>required</strong>
-                        </mat-error>
+                        <textarea required id="message" name="message" [(ngModel)]="message" matInput></textarea>
                     </mat-form-field>
-                    <button type="submit" [disabled]="!mailForm.valid"> Send</button>
+                    <button type="submit" [disabled]="f.invalid"> Send</button>
                 </form>
 
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ScrollService } from '../services/scroll.service';
 
 
 
@@ -14,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
 
 
-  constructor() {
+  constructor(public router: Router, public scrollService: ScrollService) {
 
   }
 
@@ -39,21 +41,16 @@ export class HeaderComponent implements OnInit {
     console.log(window.location.pathname)
   }
 
-  scrollInto(destination: any) {
-    if (window.location.pathname != "/") {
-      console.log("no")
-      window.location.href = "/";
-      let test = destination;
-      document.addEventListener("DOMContentLoaded", () => {
-        console.log(test)
-        this.scrollInto(destination);
-        console.log("loaded")
-      })
-    } else {
-      destination = document.getElementById(destination);
-      destination.scrollIntoView(true);
-      console.log(destination)
-    }
+  // scrollInto(destination: any) {
+  //   if (window.location.pathname != "/") {
+  //     sessionStorage.setItem('goal', destination)
+  //     //window.location.href = "/";
+  //     this.router.navigateByUrl("/");
+  //   } else {
+  //     destination = document.getElementById(destination);
+  //     destination.scrollIntoView({ block: 'end', behavior: 'smooth' });
+  //     console.log(destination)
+  //   }
 
-  }
+  // }
 }

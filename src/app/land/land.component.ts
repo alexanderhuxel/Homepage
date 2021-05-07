@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-land',
@@ -10,7 +11,7 @@ export class LandComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(public scrollService: ScrollService) { }
 
   ngOnInit(): void {
   }

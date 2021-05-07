@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HeaderComponent } from '../header/header.component';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-about-me',
@@ -8,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public scrollService: ScrollService) { }
 
+  // header = new HeaderComponent;
 
   ngOnInit(): void {
 
