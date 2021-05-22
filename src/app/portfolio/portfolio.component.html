@@ -4,16 +4,11 @@
     </p>
     <div id="projects">
         <div *ngFor="let project of portfolio; index as i;" class="project">
-            <div (mouseenter)="fadeInProject(i)" (mouseleave)="fadeInProject(i)" (touchstart)="fadeInProject(i)"
+            <div (mouseenter)="fadeInProject(i)" (mouseleave)="fadeInProject(i)" (touchend)="fadeInProject(i)"
                 class="box" id="{{ i }}">
-                <div id="left">
-                    <span>
-                        <a href="{{ project.JsDoc }}">JsDoc</a>
-                    </span>
-                </div>
-                <div id="right"><span>
-                        <a href="{{ project.link }}">Project</a>
-                    </span></div>
+                <a id="left" href="{{ project.JsDoc }}">JsDoc</a>
+                <a *ngIf="globalvariables.english" id="right" href="{{ project.link }}">Project</a>
+                <a *ngIf="!globalvariables.english" id="right" href="{{ project.link }}">Projekt</a>
             </div>
 
             <div class="template"> {{ project.name }}</div>

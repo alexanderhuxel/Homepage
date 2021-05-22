@@ -1,33 +1,35 @@
 @import src/styles.sass
 #portfolio
-    padding-top: 100px
     display: flex
     flex-direction: column
     background: $background
     justify-content: center
     align-items: center
     p
+        margin: 0px
         text-align: center
         width: 100%
         word-break: break-word
         font-family: ExtraBold
         font-size: 9rem
         letter-spacing: 5px
-        color: $font2
+        color: $orange
         position: relative
+        text-shadow: -1px 0 $font2, 0 1px $font2, 1px 0 $font2, 0 -1px $font2
         &::after
             content: "MY"
             position: absolute
-            font-size: 3rem
+            font-size: 1.3rem
             font-family: Light
+            background: rgba(24,24,24,.5)
             color: $white
             left: 0px
             right: 0px
-            top: 70px
+            top: 90px
     #projects
-        width: 100%
-        display: flex
+        width: 98vw
         flex: 1
+        display: flex
         flex-wrap: wrap
         justify-content: center
         align-items: center
@@ -98,7 +100,14 @@
 @media screen and ( max-width: 880px )
     #portfolio
         p
-            font-size: 2.7rem
+            font-size: 3rem
             &::after
-                top: 12px
-                font-size: 1.5rem
+                top: 25px
+                font-size: .8rem
+// @media screen and ( max-width: 1312px )
+//     .project
+//         margin: 4rem!important
+
+// @media screen and ( max-width: 1101 )
+//     .project
+//         margin: 1rem!important

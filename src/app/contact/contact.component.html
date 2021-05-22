@@ -6,11 +6,21 @@
                 <div id="innerBox">
                     <span>
                         <p>E-MAIL</p>
-                        <p>Admin@alexhuxel.de</p>
+                        <a href="mailto:Admin@alexhuxel.de"><i class="far fa-envelope"></i> Admin@alexhuxel.de</a>
                     </span>
                     <span>
                         <p>PHONE</p>
-                        <p>+49 157-8680-1970</p>
+                        <a *ngIf="globalvariables.english" href="tel:+4915786801970"><i class="fas fa-mobile"></i> Call
+                            me</a>
+                        <a *ngIf="!globalvariables.english" href="tel:+4915786801970"><i class="fas fa-mobile"></i> Ruf
+                            mich an</a>
+                        <a *ngIf="globalvariables.english" href="https://api.whatsapp.com/send?phone=+4915786801970"><i
+                                class="fab fa-whatsapp"></i>
+                            Chat
+                            with me</a>
+                        <a *ngIf="!globalvariables.english" href="https://api.whatsapp.com/send?phone=+4915786801970"><i
+                                class="fab fa-whatsapp"></i>
+                            Schreib mir</a>
                     </span>
                     <span>
                         <p>ADDRESS</p>
@@ -31,15 +41,18 @@
                         <input required type="email" name="email" id="email" [(ngModel)]="email" matInput>
                     </mat-form-field>
                     <mat-form-field class="halfplus-width target">
-                        <mat-label>PHONE NUMBER</mat-label>
+                        <mat-label *ngIf="globalvariables.english">PHONE NUMBER</mat-label>
+                        <mat-label *ngIf="!globalvariables.english">Telefonnummer</mat-label>
                         <input type="phone" required name="phone" id="phone" [(ngModel)]="phone" matInput>
                     </mat-form-field>
 
                     <mat-form-field class="full-width target">
-                        <mat-label>Message</mat-label>
+                        <mat-label *ngIf="globalvariables.english">Message</mat-label>
+                        <mat-label *ngIf="!globalvariables.english">Nachricht</mat-label>
                         <textarea required id="message" name="message" [(ngModel)]="message" matInput></textarea>
                     </mat-form-field>
-                    <button type="submit" [disabled]="f.invalid"> Send</button>
+                    <button *ngIf="globalvariables.english" type="submit" [disabled]="f.invalid"> Send</button>
+                    <button *ngIf="!globalvariables.english" type="submit" [disabled]="f.invalid"> Absenden</button>
                 </form>
 
 

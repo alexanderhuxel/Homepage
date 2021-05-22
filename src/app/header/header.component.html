@@ -5,36 +5,79 @@
                 </a>
         </div>
 
+
+
         <nav id="menu">
                 <ul id="desktopmenu">
-                        <li><a (click)="scrollService.scrollInto('about')"
+                        <li><a *ngIf="globalvariables.english" (click)="scrollService.scrollInto('about')"
                                         (touch)="scrollService.scrollInto('about')">About Me</a>
                         </li>
-                        <li><a (click)="scrollService.scrollInto('portfolio')"
+                        <li><a *ngIf="!globalvariables.english" (click)="scrollService.scrollInto('about')"
+                                        (touch)="scrollService.scrollInto('about')">Über mich</a>
+                        </li>
+                        <li><a *ngIf="globalvariables.english" (click)="scrollService.scrollInto('portfolio')"
                                         (touch)="scrollService.scrollInto('portfolio')">Portfolio</a></li>
-                        <li><a (click)="scrollService.scrollInto('contact')"
+                        <li><a *ngIf="!globalvariables.english" (click)="scrollService.scrollInto('portfolio')"
+                                        (touch)="scrollService.scrollInto('portfolio')">Meine Projekte</a></li>
+                        <li><a *ngIf="globalvariables.english" (click)="scrollService.scrollInto('contact')"
                                         (touch)="scrollService.scrollInto('contact')">Contact</a></li>
-                        <li><a (click)="scrollService.scrollInto('contact')"
+                        <li><a *ngIf="!globalvariables.english" (click)="scrollService.scrollInto('contact')"
+                                        (touch)="scrollService.scrollInto('contact')">Kontakt</a></li>
+                        <li><a *ngIf="globalvariables.english" (click)="scrollService.scrollInto('contact')"
                                         (touch)="scrollService.scrollInto('contact')">Hire
                                         Me</a></li>
+                        <li><a *ngIf="!globalvariables.english" (click)="scrollService.scrollInto('contact')"
+                                        (touch)="scrollService.scrollInto('contact')">Stell mich ein</a></li>
 
                 </ul>
                 <ul id="mobilemenu" class="d-none">
-                        <li><a (click)="scrollService.scrollInto('about'); openMenu()"
+                        <li><a *ngIf="globalvariables.english" (click)="scrollService.scrollInto('about'); openMenu()"
                                         (touch)="scrollService.scrollInto('about'); openMenu()">About Me</a></li>
-                        <li><a (click)="scrollService.scrollInto('portfolio'); openMenu()"
+                        <li><a *ngIf="!globalvariables.english" (click)="scrollService.scrollInto('about'); openMenu()"
+                                        (touch)="scrollService.scrollInto('about'); openMenu()">Über mich</a></li>
+                        <li><a *ngIf="globalvariables.english"
+                                        (click)="scrollService.scrollInto('portfolio'); openMenu()"
                                         (touch)="scrollService.scrollInto('portfolio'); openMenu()">Portfolio</a></li>
-                        <li><a (click)="scrollService.scrollInto('contact'); openMenu() "
-                                        (touch)="scrollService.scrollInto('contact'); openMenu()">Contact</a>
+                        <li><a *ngIf="!globalvariables.english"
+                                        (click)="scrollService.scrollInto('portfolio'); openMenu()"
+                                        (touch)="scrollService.scrollInto('portfolio'); openMenu()">Meine Projekte</a>
                         </li>
-                        <li><a (click)="scrollService.scrollInto('contact'); openMenu()"
+                        <li><a *ngIf="globalvariables.english"
+                                        (click)="scrollService.scrollInto('contact'); openMenu() "
+                                        (touch)="scrollService.scrollInto('contact'); openMenu()">Contact</a>
+                        <li><a *ngIf="!globalvariables.english"
+                                        (click)="scrollService.scrollInto('contact'); openMenu() "
+                                        (touch)="scrollService.scrollInto('contact'); openMenu()">Kontakt</a>
+                        </li>
+                        <li><a *ngIf="globalvariables.english" (click)="scrollService.scrollInto('contact'); openMenu()"
                                         (touch)="scrollService.scrollInto('contact'); openMenu()">Hire Me</a>
                         </li>
+                        <li><a *ngIf="!globalvariables.english"
+                                        (click)="scrollService.scrollInto('contact'); openMenu()"
+                                        (touch)="scrollService.scrollInto('contact'); openMenu()">Stellt mich ein</a>
+                        </li>
+                        <li><a *ngIf="globalvariables.english" routerLink="/imprint" (click)="openMenu()"
+                                        (touch)="openMenu()">Imprint</a>
+                        <li><a *ngIf="!globalvariables.english" routerLink="/imprint" (click)="openMenu()"
+                                        (touch)="openMenu()">Impressum</a>
+                        </li>
+                        <li><a *ngIf="globalvariables.english" routerLink="/dataprotection" (click)="openMenu()"
+                                        (touch)="openMenu()">Dataprotection</a>
+                        <li><a *ngIf="!globalvariables.english" routerLink="/dataprotection" (click)="openMenu()"
+                                        (touch)="openMenu()">Datenschutz</a>
+                        </li>
+
 
                 </ul>
 
-
+                <span class="language">
+                        <p [ngClass]="{'selected': !globalvariables.english}" (click)="changelanguage(false)">de
+                        </p>
+                        <p [ngClass]="{'selected': globalvariables.english}" (click)="changelanguage(true)">en
+                        </p>
+                </span>
 
         </nav>
         <button (click)="openMenu()" id="menuicon"><span></span></button>
+
 </header>

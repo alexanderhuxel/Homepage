@@ -4,6 +4,7 @@ import { ErrorComponent } from '../error/error.component';
 import { SendComponent } from '../send/send.component';
 import { NgForm } from '@angular/forms'
 import { Router } from '@angular/router';
+import { GlobalvaribalesService } from '../services/globalvaribales.service';
 
 
 
@@ -16,7 +17,6 @@ import { Router } from '@angular/router';
 
 export class ContactComponent implements OnInit {
 
-
   error = false;
   @Input() name: string = "";
   @Input() email: string = "";
@@ -24,8 +24,7 @@ export class ContactComponent implements OnInit {
   @Input() message: string = "";
 
 
-  constructor(public dialog: MatDialog, public router: Router) { }
-
+  constructor(public dialog: MatDialog, public router: Router, public globalvariables: GlobalvaribalesService) { }
 
 
 

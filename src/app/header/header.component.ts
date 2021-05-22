@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GlobalvaribalesService } from '../services/globalvaribales.service';
 import { ScrollService } from '../services/scroll.service';
 
 
@@ -14,9 +15,7 @@ export class HeaderComponent implements OnInit {
   dataprotection = "/dataprotection";
   menuOpen: boolean = false;
 
-
-
-  constructor(public router: Router, public scrollService: ScrollService) {
+  constructor(public router: Router, public scrollService: ScrollService, public globalvariables: GlobalvaribalesService) {
 
   }
 
@@ -36,9 +35,14 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  changelanguage(status: any) {
+    this.globalvariables.english = status
+  }
+
+
 
   ngOnInit(): void {
-    console.log(window.location.pathname)
+
   }
 
   // scrollInto(destination: any) {

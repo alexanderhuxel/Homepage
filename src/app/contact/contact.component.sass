@@ -1,70 +1,33 @@
 @import src/styles.sass
 
-.half-width
-    width: 45%!important
-    margin-bottom: 15%
-    margin-top: 5%
-.margin-left
-    margin-left: 10%
-.halfplus-width
-    width: 45%!important
-    height: 100px
-.full-width
-    margin-top: 5%
-    margin-bottom: 5%
-    width: 100%!important
-.customizer
-    color: $white!important
-    label
-        color: red!important
-
-::ng-deep  .mat-focused .mat-form-field-label
-
-    color: $orange !important
-
-::ng-deep.mat-form-field-underline
-
-    background-color: $orange !important
-
-::ng-deep.mat-form-field-ripple
-
-    background-color: $orange !important
-
 #contact
-    padding-bottom: 200px
-    padding-top: 100px
+    padding-bottom: 15px
     background: $background
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
     #headline
+        margin: 0px 0px 50px 0px
         text-align: center
         width: 100%
         word-break: break-word
         font-family: ExtraBold
         font-size: 9rem
         letter-spacing: 5px
-        color: $font2
+        color: $orange
+        text-shadow: -1px 0 $font2, 0 1px $font2, 1px 0 $font2, 0 -1px $font2
         position: relative
         &::after
-            content: "GET"
+            content: "GET IN TOUCH"
             position: absolute
-            font-size: 2rem
+            font-size: 1.3rem
             font-family: Light
+            background: rgba(24,24,24,.5)
             color: $white
             left: 0px
             right: 0px
-            top: 60px
-        &::before
-            content: "IN TOUCH"
-            position: absolute
-            font-size: 2rem
-            font-family: Light
-            color: $white
-            left: 0px
-            right: 0px
-            top: 100px
+            top: 90px
 
 #messageBox
     display: flex
@@ -75,27 +38,57 @@
         justify-content: center
         align-content: center
         #myContact
-            border: $orange solid 2px
             width: 300px
             color: $font3
-            background: $footer
+            background: $font2
             #innerBox
                 padding: 50px
                 span
+                    #whatsapp
+                        font-size: 1.5rem
+                        display: flex
+                        align-items: center
+                        p
+                            font-size: 1.2rem
                     &:nth-of-type(1)
                         p
                             &:nth-of-type(1)
                                 font-family: Regular
                                 font-size: 1.5rem
-                            &:nth-of-type(2)
-                                font-family: Light
+                        a
+                            font-family: Light
+                            text-decoration: none
+                            color: $font3
+                            &:hover
+                                a
+                                    color: $white
+                                i
+                                    color: $white
+                        i
+                            color: $orange
+                            font-size: 1.5rem
+                            margin-right: 10px
                     &:nth-of-type(2)
+                        display: flex
+                        flex-direction: column
                         p
                             &:nth-of-type(1)
                                 font-family: Regular
                                 font-size: 1.5rem
-                            &:nth-of-type(2)
-                                font-family: Light
+                        a
+                            font-family: Light
+                            font-size: 1.2rem
+                            text-decoration: none
+                            color: $font3
+                            &:hover
+                                a
+                                    color: $white
+                                i
+                                    color: $white
+                        i
+                            margin-right: 10px
+                            font-size: 1.5rem
+                            color: $orange
 
                     &:nth-of-type(3)
                         p
@@ -106,18 +99,24 @@
                                 font-family: Light
 
     #contactform
-        margin: 0% 5% 0% 10%
+        justify-content: center
+        align-items: center
+        display: flex
+        margin: 0% auto 0% auto
         form
+            border: dotted $orange 3px
+            padding: 25px
+            width: 100%
             flex-wrap: wrap!important
             display: flex
         button
             background: $orange
             border-radius: 20px
-            width: 100px
+            width: auto
             text-align: center
             padding: 10px
             color: $white
-            font-size: 1rem
+            font-size: 1.2rem
             font-family: Bold
             border: none
             &:hover
@@ -131,9 +130,15 @@
     #contact
         #headline
             font-size: 3.5rem
-            &::before
-                font-size: 1.5rem
-                top: 40px
             &::after
-                font-size: 1.5rem
-                top: 10px
+                font-size: 1rem
+                top: 30px
+@media screen and ( max-width: 1700px )
+    #myContact
+        width: 80vw!important
+        max-width: 878px
+        border-radius: 100px
+        text-align: center
+        margin-bottom: 50px
+    form
+        border: solid 1px $orange

@@ -1,5 +1,24 @@
 @import src/styles.sass
 
+.language
+    flex-direction: column
+    border: 1px solid
+    display: flex
+    position: absolute
+    right: 40px
+    top: 30px
+    @media screen and ( max-width: 1000px )
+        right: 80px
+        top: 41px
+    p
+        text-transform: uppercase
+        font-weight: 600
+        margin: 0px 5px 0px 5px
+        &:hover
+            opacity: .5
+            cursor: pointer
+    .selected
+        opacity: .5
 mark
     position: absolute
     top: 10px
@@ -17,6 +36,9 @@ mark
         &::before
             width: 35px!important
 header
+
+    z-index: 99
+    box-shadow: 1px 1px $font2
     justify-content: space-between
     padding-right: 50px
     display: flex
@@ -28,7 +50,6 @@ header
     #menuicon
         display: none
     #menu
-        display: flex
         #mobilemenu
             display: none
         #desktopmenu
@@ -36,6 +57,7 @@ header
             font-family: Regular
             list-style: none
             margin-top: 20px
+            margin-right: 50px
             width: 100%
             a
                 transition: ease-in-out 225ms
@@ -70,7 +92,7 @@ header
         all: unset
         position: absolute!important
         right: 15px
-        top: 35px
+        top: 32px
         width: 40px
         height: 35px
         cursor: pointer
@@ -123,6 +145,7 @@ header
             position: absolute
             right: 0px
             #mobilemenu
+                padding-top: 100px
                 background: $font2
                 border-bottom-left-radius: 20px
                 border-bottom-right-radius: 20px
@@ -133,8 +156,12 @@ header
                 flex-direction: column
                 align-items: center
                 justify-content: center
+                padding-left: 0px
+                li
+                    margin: 15px 0px 15px 0px
                 a
-                    font-size: 2rem
+                    text-decoration: none
+                    font-size: 1.7rem
                     font-family: ExtraBold
                     text-transform: uppercase
                     letter-spacing: .3rem

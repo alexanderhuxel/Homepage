@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
+import { GlobalvaribalesService } from '../services/globalvaribales.service';
 import { ScrollService } from '../services/scroll.service';
 
 @Component({
@@ -9,12 +10,11 @@ import { ScrollService } from '../services/scroll.service';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor(public scrollService: ScrollService) { }
+  constructor(public scrollService: ScrollService, public globalvariables: GlobalvaribalesService) { }
 
-  // header = new HeaderComponent;
 
   ngOnInit(): void {
-
+    console.log(this.globalvariables.english)
   }
 
 

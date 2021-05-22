@@ -1,8 +1,12 @@
 <div id="land">
-    <span>
+    <span *ngIf="globalvariables.english">
         <p>Hello! I´M</p>
         <p>Alexander Huxel</p>
-        <p>Front-End Web Developer</p>
+        <p>Jr. Front-End Web Developer</p>
+    </span>
+    <span *ngIf="!globalvariables.english">
+        <p>Alexander Huxel</p>
+        <p>Jr. Front-End Entwickler</p>
     </span>
     <a (click)="scrollService.scrollInto('about')" (touch)="scrollService.scrollInto('about')"><i
             class="fas fa-arrow-down"></i></a>
