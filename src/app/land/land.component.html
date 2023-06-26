@@ -1,15 +1,18 @@
 <div id="land">
-    <span *ngIf="globalvariables.english">
-        <p>Hello! I´M</p>
-        <p>Alexander Huxel</p>
-        <p>Jr. Front-End Web Developer</p>
-    </span>
-    <span *ngIf="!globalvariables.english">
-        <p>Alexander Huxel</p>
-        <p>Jr. Front-End Entwickler</p>
-    </span>
-    <a (click)="scrollService.scrollInto('about')" (touch)="scrollService.scrollInto('about')"><i
-            class="fas fa-arrow-down"></i></a>
-    <span>ALEX</span>
-    <img src="assets/img/land.jpg">
+  <span *ngIf="globalvariables.english">
+    <p>Hello! I´M</p>
+    <p>Alexander Huxel</p>
+    <p>Jr. Front-End Web Developer</p>
+  </span>
+  <span *ngIf="!globalvariables.english">
+    <p>Alexander Huxel</p>
+    <p>Jr. Front-End Entwickler</p>
+  </span>
+  <a
+    (click)="scrollService.scrollInto('about')"
+    (touch)="scrollService.scrollInto('about')"
+    ><i class="fas fa-arrow-down"></i
+  ></a>
+  <span>ALEX</span>
+  <img src="assets/img/about.jpg" />
 </div>

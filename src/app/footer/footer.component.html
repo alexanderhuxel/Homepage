@@ -1,57 +1,94 @@
 <footer>
-    <div id="footer-bar">
-        <div id="logo">
-            <a (click)="scrollService.scrollInto('logo')" (touch)="scrollService.scrollInto('logo')">
-                <p>ALE<span>X</span></p>
-            </a>
-        </div>
-        <div id="links">
-            <div id="QLinks">
-
-                <h3 *ngIf="globalvariables.english">Quick Links</h3>
-                <h3 *ngIf="!globalvariables.english">Navigation</h3>
-                <a *ngIf="globalvariables.english" (click)="scrollService.scrollInto('about')"
-                    (touch)="scrollService.scrollInto('about')">About Me</a>
-                <a *ngIf="!globalvariables.english" (click)="scrollService.scrollInto('about')"
-                    (touch)="scrollService.scrollInto('about')">Über mich</a>
-                <a *ngIf="globalvariables.english" (click)="scrollService.scrollInto('portfolio')"
-                    (touch)="scrollService.scrollInto('portfolio')">Portfolio</a>
-                <a *ngIf="!globalvariables.english" (click)="scrollService.scrollInto('portfolio')"
-                    (touch)="scrollService.scrollInto('portfolio')">Mein Projekte</a>
-                <a *ngIf="globalvariables.english" (click)="scrollService.scrollInto('contact')"
-                    (touch)="scrollService.scrollInto('contact')">Contact</a>
-                <a *ngIf="!globalvariables.english" (click)="scrollService.scrollInto('contact')"
-                    (touch)="scrollService.scrollInto('contact')">Kontakt</a>
-                <a *ngIf="globalvariables.english" (click)="scrollService.scrollInto('contact')"
-                    (touch)="scrollService.scrollInto('contact')">Hire
-                    Me</a>
-                <a *ngIf="!globalvariables.english" (click)="scrollService.scrollInto('contact')"
-                    (touch)="scrollService.scrollInto('contact')">Stellt mich ein</a>
-
-            </div>
-            <div id="ELinks">
-
-                <h3 *ngIf="globalvariables.english">Rights</h3>
-                <h3 *ngIf="!globalvariables.english">Rechtliches</h3>
-                <a *ngIf="globalvariables.english" routerLink="/imprint">Imprint</a>
-                <a *ngIf="!globalvariables.english" routerLink="/imprint">Impressum</a>
-                <a *ngIf="globalvariables.english" routerLink="/dataprotection">Data Protection</a>
-                <a *ngIf="!globalvariables.english" routerLink="/dataprotection">Datenschutz</a>
-
-            </div>
-            <div id="Social">
-                <h3 *ngIf="globalvariables.english">Follow Me</h3>
-                <h3 *ngIf="!globalvariables.english">Folge mir</h3>
-                <span>
-                    <a href="https://www.linkedin.com/in/alexander-huxel-091b17209/"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/alexanderhuxel"><i class="fab fa-github-square"></i></a>
-                </span>
-
-
-            </div>
-        </div>
+  <div id="footer-bar">
+    <div id="logo">
+      <a
+        (click)="scrollService.scrollInto('logo')"
+        (touch)="scrollService.scrollInto('logo')"
+      >
+        <p>ALE<span>X</span></p>
+      </a>
     </div>
-    <span id="border"></span>
-    <div id="copyright">©Copyright 2021 Alex - All Rights Reserved</div>
+    <div id="links">
+      <div id="QLinks">
+        <h3 *ngIf="globalvariables.english">Quick Links</h3>
+        <h3 *ngIf="!globalvariables.english">Navigation</h3>
+        <a
+          *ngIf="globalvariables.english"
+          (click)="scrollService.scrollInto('about')"
+          (touch)="scrollService.scrollInto('about')"
+          >About Me</a
+        >
+        <a
+          *ngIf="!globalvariables.english"
+          (click)="scrollService.scrollInto('about')"
+          (touch)="scrollService.scrollInto('about')"
+          >Über mich</a
+        >
+        <a
+          *ngIf="globalvariables.english"
+          (click)="scrollService.scrollInto('portfolio')"
+          (touch)="scrollService.scrollInto('portfolio')"
+          >Portfolio</a
+        >
+        <a
+          *ngIf="!globalvariables.english"
+          (click)="scrollService.scrollInto('portfolio')"
+          (touch)="scrollService.scrollInto('portfolio')"
+          >Mein Projekte</a
+        >
+        <a
+          *ngIf="globalvariables.english"
+          (click)="scrollService.scrollInto('contact')"
+          (touch)="scrollService.scrollInto('contact')"
+          >Contact</a
+        >
+        <a
+          *ngIf="!globalvariables.english"
+          (click)="scrollService.scrollInto('contact')"
+          (touch)="scrollService.scrollInto('contact')"
+          >Kontakt</a
+        >
+        <a
+          *ngIf="globalvariables.english"
+          (click)="scrollService.scrollInto('contact')"
+          (touch)="scrollService.scrollInto('contact')"
+          >Hire Me</a
+        >
+        <a
+          *ngIf="!globalvariables.english"
+          (click)="scrollService.scrollInto('contact')"
+          (touch)="scrollService.scrollInto('contact')"
+          >Stellt mich ein</a
+        >
+      </div>
+      <div id="ELinks">
+        <h3 *ngIf="globalvariables.english">Rights</h3>
+        <h3 *ngIf="!globalvariables.english">Rechtliches</h3>
+        <a *ngIf="globalvariables.english" routerLink="/imprint">Imprint</a>
+        <a *ngIf="!globalvariables.english" routerLink="/imprint">Impressum</a>
+        <a *ngIf="globalvariables.english" routerLink="/dataprotection"
+          >Data Protection</a
+        >
+        <a *ngIf="!globalvariables.english" routerLink="/dataprotection"
+          >Datenschutz</a
+        >
+      </div>
+      <div id="Social">
+        <h3 *ngIf="globalvariables.english">Follow Me</h3>
+        <h3 *ngIf="!globalvariables.english">Folge mir</h3>
+        <span>
+          <a href="https://www.linkedin.com/in/alexander-huxel-091b17209/"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://github.com/alexanderhuxel"
+            ><i class="fab fa-github-square"></i
+          ></a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <span id="border"></span>
+  <div id="copyright">
+    ©Copyright {{ legalDate }} Alex - All Rights Reserved
+  </div>
 </footer>

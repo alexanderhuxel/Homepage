@@ -1,37 +1,60 @@
 <div class="wrap" id="about">
-    <div id="imgbox">
-        <img src="assets/img/about.jpg">
-    </div>
-    <div id="text">
-        <p>ABOUT</p>
-        <p *ngIf="globalvariables.english"> I'm a german speaking 27 years old Jr. Front-End Web
-            Developer living in
-            Bellheim.
-            In november 2020 I decided to enhance my professional field.
-            <br> <br> <br>
-            Since my childhood I was passionate about IT. When I discovered the "Developer-Akademie.de", a new chapter
-            in my life has started. Right now I'm studying at the "Developer-Akademie.de" and I am looking for a job as
-            Junior Front-End Web Developer.
-            <br> <br> <br>
-            In May 2014, I successfully completed my apprenticeship as a warehouse logistics specialist. Up to now I am
-            still working in this industry, where I gathered professional experience and skills in various small and
-            large companies.
-        </p>
-        <p *ngIf="!globalvariables.english"> Ich bin 27 Jahre alt, lebe in Bellheim in der Pfalz und programmiere auf
-            Junior Nivea Frontend Applikationen und Webseiten.
-            <br> <br> <br>
-            Seit meiner Kindheit interessiere ich mich leidenschaftlich für IT. Als ich die "Developer-Akademie.de"
-            entdeckte, habe ich einen Großteil meiner Feierabende dazu genutzt Programmieren zu lernen. Im Moment
-            studiere ich in der "Developer-Akademie.de" und suche einen Job als Junior Front-End-Webentwickler.
-            <br> <br> <br>
-            Im Mai 2014 habe ich erfolgreich meine Ausbildung zur Fachkraft für Lagerlogistik abgeschlossen.
-            Anschließend habe ich in dem Bereich der Logistik viel Erfahrung gesammelt sowie in kleine als auch in
-            großen Unternehmen.
-        </p>
-        <p *ngIf="!globalvariables.english"><a (click)="scrollService.scrollInto('contact')"
-                (touch)="scrollService.scrollInto('contact')">Stellt <b>mich</b> ein!</a></p>
-        <p *ngIf="globalvariables.english"><a (click)="scrollService.scrollInto('contact')"
-                (touch)="scrollService.scrollInto('contact')">HIRE
-                ME</a></p>
-    </div>
+  <div id="imgbox">
+    <img src="assets/img/land.jpg" />
+  </div>
+  <div id="text">
+    <p>ABOUT</p>
+    <p *ngIf="globalvariables.english">
+      I'm a german speaking {{ globalvariables.age }} years old Jr. Front-End
+      Web Developer living in Bellheim. In november 2020 I decided to enhance my
+      professional field.
+      <br />
+      <br />
+      <br />
+      Since my childhood I was passionate about IT. When I discovered the
+      "Developer-Akademie.de", a new chapter in my life has started. Right now
+      I'm studying at the "Developer-Akademie.de" and I am looking for a job as
+      Junior Front-End Web Developer.
+      <br />
+      <br />
+      <br />
+      In May 2014, I successfully completed my apprenticeship as a warehouse
+      logistics specialist. Up to now I am still working in this industry, where
+      I gathered professional experience and skills in various small and large
+      companies.
+    </p>
+    <p *ngIf="!globalvariables.english">
+      Ich bin {{ globalvariables.age }} Jahre alt, lebe in Bellheim in der Pfalz
+      und programmiere auf Junior Nivea Frontend Applikationen und Webseiten.
+      <br />
+      <br />
+      <br />
+      Seit meiner Kindheit interessiere ich mich leidenschaftlich für IT. Als
+      ich die "Developer-Akademie.de" entdeckte, habe ich einen Großteil meiner
+      Feierabende dazu genutzt Programmieren zu lernen. Im Moment studiere ich
+      in der "Developer-Akademie.de" und suche einen Job als Junior
+      Front-End-Webentwickler.
+      <br />
+      <br />
+      <br />
+      Im Mai 2014 habe ich erfolgreich meine Ausbildung zur Fachkraft für
+      Lagerlogistik abgeschlossen. Anschließend habe ich in dem Bereich der
+      Logistik viel Erfahrung gesammelt sowie in kleine als auch in großen
+      Unternehmen.
+    </p>
+    <p *ngIf="!globalvariables.english">
+      <a
+        (click)="scrollService.scrollInto('contact')"
+        (touch)="scrollService.scrollInto('contact')"
+        >Stellt <b>mich</b> ein!</a
+      >
+    </p>
+    <p *ngIf="globalvariables.english">
+      <a
+        (click)="scrollService.scrollInto('contact')"
+        (touch)="scrollService.scrollInto('contact')"
+        >HIRE ME</a
+      >
+    </p>
+  </div>
 </div>
