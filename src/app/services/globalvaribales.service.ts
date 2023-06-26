@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class GlobalvaribalesService {
-  english: boolean = true;
+  english: boolean = false;
 
   currentYear = new Date().getFullYear();
   birthYear = 1994;
